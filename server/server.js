@@ -5,6 +5,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
+const PORT = process.env.PORT || 5005;
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -29,7 +30,7 @@ const DetailsSchema = new mongoose.Schema({
   lastName: String,
   email: String,
   indosNumber: String
-})
+});
 
 const Question = mongoose.model("imucet", QuestionSchema, "imucet");
 const Details = mongoose.model("userDetails", DetailsSchema, "userDetails");
@@ -42,10 +43,6 @@ app.get("/api/questions", async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Internal server error" });
   }
-});
-
-app.listen(5005, () => {
-  console.log("Server is running on port 5005");
 });
 
 app.post('/api/storeUserData', async (req, res) => {
@@ -70,6 +67,7 @@ app.post('/api/storeUserData', async (req, res) => {
   }
 });
 
-app.listen(5006, () => {
-  console.log("Server is running on port 5006");
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+  console.log(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.pkfgwas.mongodb.net/test_series`);
 });

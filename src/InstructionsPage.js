@@ -58,7 +58,7 @@ function InstructionsPage() {
     if (isFieldsValid && isEmailValid) {
       try {
         // Make a POST request to store user data
-        await fetch('http://localhost:5006/api/storeUserData', {
+        await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}api/storeUserData`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -114,6 +114,7 @@ function InstructionsPage() {
     }
   };
   
+  console.log(process.env.REACT_APP_SERVER_BASE_URL)
 
   return (
     <div className="flex flex-col justify-center bg-white sm:px-8 px-6 pt-6  rounded-lg shadow-lg max-w-3xl mx-auto md:mt-20 lg:mt-6 lg:mb-6 font-montserrat">
