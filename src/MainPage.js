@@ -38,12 +38,12 @@ function TestSeriesPage() {
     selectedTab === "Subject" ? categories.slice(0, 6) : categories.slice(6);
 
   return (
-    <div className="min-h-screen sm:px-8 px-6 pt-6  font-montserrat overflow-hidden">
-      <div className="flex space-x-2 items-center mb-4">
+    <div className="min-h-screen sm:px-8 px-6 pt-6 mb-4 sm:mb-0 font-montserrat overflow-hidden">
+      <div className="flex space-x-2 items-center mb-6">
           <img
             src="https://drive.google.com/uc?id=11C2pCv-w91WXF0r-jfb2QYj5nkbyU3FC"
             alt="Logo"
-            className="w-14 h-14 sm:w-16 sm:h-16 motion-safe:animate-spin"
+            className="w-12 h-12 sm:w-14 sm:h-14 motion-safe:animate-spin"
           />
         <h1 className="flex text-2xl sm:text-3xl font-bold text-dark-blue">
           My Tests <FaChevronRight className="p-1 m-1" /> IMUCET

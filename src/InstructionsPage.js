@@ -205,7 +205,7 @@ function InstructionsPage() {
             <input
               type="checkbox"
               id="agreement"
-              className="mr-2 h-3 w-3"
+              className="mr-1 h-2.5 w-3"
               checked={isAgreed}
               onChange={handleAgreementChange}
               disabled={!isEmailValid}

@@ -19,13 +19,13 @@ function AnswerKeyPage() {
 
   return (
     <div className="min-h-screen sm:px-8 px-6 py-4 font-montserrat overflow-hidden flex flex-col">
-      <div className="flex space-x-2 items-center mb-5">
+      <div className="flex space-x-2.5 items-center mb-5">
           <img
             src="https://drive.google.com/uc?id=11C2pCv-w91WXF0r-jfb2QYj5nkbyU3FC"
             alt="Logo"
-            className="w-14 h-14 sm:w-16 sm:h-16 motion-safe:animate-spin"
+            className="w-12 h-12 sm:w-14 sm:h-14 motion-safe:animate-spin"
           />
-          <h1 className="flex text-2xl sm:text-3xl font-bold text-dark-blue">
+          <h1 className="flex text-lg sm:text-2xl font-bold text-dark-blue">
             {selectedCategory} <FaChevronRight className="p-1 m-1" /> Answer Key
           </h1>
           </div>
