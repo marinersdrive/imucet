@@ -25,7 +25,7 @@ function TestPage() {
 
   // Fetch questions from the server
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_SERVER_BASE_URL}api/questions`)
+    axios.get("http://localhost:5005/api/questions")
       .then(response => {
         // Filter questions by selectedCategory
         let filteredQuestions;
