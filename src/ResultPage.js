@@ -159,11 +159,11 @@ function ResultPage() {
 
     
     {/* Right side content */}
-    <div className="w-full sm:w-1/2 sm:m-0 m-14">
+    <div className="w-full sm:w-1/2 sm:m-0 m-16">
         <div className="sm:flex justify-center items-center h-full">
           <div style={{ width: '70%', position: 'relative' }}>
             {/* White circular component */}
-            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', borderRadius: '50%', backgroundColor: 'white', width: '70%', height: '70%', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: isPass ? '#4CAF50' : '#FF6347', border: '1px solid #f0f0f0', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }} className="text-7xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', borderRadius: '50%', backgroundColor: 'white', width: '70%', height: '70%', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: isPass ? '#4CAF50' : '#FF6347', border: '1px solid #f0f0f0', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }} className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               {/* Percentage in bold */}
               {`${Math.round((correctCount / totalQuestions) * 100)}%`}
             </div>
