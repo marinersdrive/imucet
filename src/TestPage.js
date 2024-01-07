@@ -300,8 +300,8 @@ function TestPage() {
             <p className="text-sm sm:text-base">{selectedCategory} {currentSubCategory}</p>
           </div>
         </div>
-        <div className="text-lg sm:text-xl flex items-center">
-          <FiClock className="mr-2" />
+        <div className="text-base sm:text-xl flex items-center">
+          <FiClock className="sm:mr-2 mr-1 pb-0.5 sm:pb-0" />
           Time Left: {Math.floor(remainingTime / 60).toString().padStart(2, '0')}:{(remainingTime % 60).toString().padStart(2, '0')}
         </div>
       </div>
@@ -312,17 +312,17 @@ function TestPage() {
         {/* Question information section */}
         <div className="p-6 space-y-4">
           <div className="flex justify-between items-center hover:bg-opacity-90 transition duration-300 ease-in-out">
-            <p className="text-black sm:text-base text-sm">Question {currentQuestionIndex + 1} of {questions.length}</p>
-            <p className="text-black sm:text-base text-sm">Marks: 1</p>
-            <p className="text-black sm:text-base text-sm">Section: DG Exit Exam</p>
+            <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Question {currentQuestionIndex + 1} of {questions.length}</p>
+            <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Marks: 1</p>
+            <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Section: DG Exit Exam</p>
           </div>
         </div>
           
           {currentQuestion && (
-            <div className="bg-white flex-grow p-12 space-y-4">
+            <div className="bg-white flex-grow sm:p-12 p-10">
             {/* Question and options section */}
               <div>
-                <div className="text-black font-medium text-base sm:text-lg mb-12 mt-8">{currentQuestion.question}</div>
+                <div className="text-black font-medium text-base sm:text-lg mb-12 sm:mt-8 mt-4">{currentQuestion.question}</div>
                 <div>
           
                 
