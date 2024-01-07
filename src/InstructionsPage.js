@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./InstructionsPage.css";
 import { useNavigate } from "react-router-dom";
+import { ThreeDots } from "react-loader-spinner";
 
 function InstructionsPage() {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ function InstructionsPage() {
   const [isAgreed, setIsAgreed] = useState(false);
   const [isFieldsValid, setIsFieldsValid] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -57,25 +59,31 @@ function InstructionsPage() {
   const handleProceed = async () => {
     if (isFieldsValid && isEmailValid) {
       try {
-        // Make a POST request to store user data
-        await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}api/storeUserData`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            firstName,
-            lastName,
-            email,
-            indosNumber,
-          }),
-        });
-  
-        // Navigate to the next page
-        navigate("/TestPage");
+        // Show loading indicator
+      setIsLoading(true);
+
+      // Make a POST request to store user data
+      await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}api/storeUserData`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          indosNumber,
+        }),
+      });
+      // Wait for 5 seconds
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      // Navigate to the next page
+      navigate("/TestPage");
       } catch (error) {
         console.error('Error storing user data:', error);
         // Handle error, show an alert, etc.
+      }finally {
+        setIsLoading(false); // Set loading state back to false after the operation is complete
       }
     }
   };
@@ -233,7 +241,19 @@ function InstructionsPage() {
               }}
               disabled={!isFieldsValid}
             >
-              Proceed
+               {isLoading ? (
+          <span className="flex justify-center items-center">
+            <span className="mr-2">Proceed</span>
+            <ThreeDots
+              color="#8ECAE6"
+              height={20}
+              width={20}
+              visible={isLoading}
+            />
+          </span>
+        ) : (
+          "Proceed"
+        )}
             </button>
           </div>
         </div>
