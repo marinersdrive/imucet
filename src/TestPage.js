@@ -336,7 +336,7 @@ function TestPage() {
           <div className="flex justify-between items-center hover:bg-opacity-90 transition duration-300 ease-in-out">
             <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Question {currentQuestionIndex + 1} of {questions.length}</p>
             <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Marks: 1</p>
-            <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Section: DG Exit Exam</p>
+            <p className="text-black text-opacity-80 sm:text-base font-medium text-xs">Section: IMUCET</p>
           </div>
         </div>
           
