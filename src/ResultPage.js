@@ -15,7 +15,7 @@ function ResultPage() {
   const correctCount = localStorage.getItem("correctCount");
   const incorrectCount = localStorage.getItem("incorrectCount");
   let selectedCategory = localStorage.getItem("selectedCategory");
-  let selectedCategory1 = localStorage.getItem("selectedCategory");
+  //let selectedCategory1 = localStorage.getItem("selectedCategory");
 
   useEffect(() => {
     window.history.pushState(null, null, window.location.href);
@@ -66,9 +66,6 @@ function ResultPage() {
   const passPercentage = 50;
   const isPass = (correctCount / totalQuestions) * 100 >= passPercentage;
 
-  if (selectedCategory1 === "General Knowledge"){
-    selectedCategory1 = "G. K."
-  }
 
   return (
     <div onCopy={(e) => e.preventDefault()} className="min-h-screen justify-center sm:px-8 px-6 pt-4 font-montserrat overflow-hidden sm:flex">
@@ -81,7 +78,7 @@ function ResultPage() {
               className="w-12 h-12 sm:w-14 sm:h-14 motion-safe:animate-spin"
             />
             <h1 className="flex text-lg sm:text-2xl font-bold text-dark-blue">
-              {selectedCategory1} <FaChevronRight className="p-1 m-1 font-bold" /> Mock Exam Result
+              {selectedCategory} <FaChevronRight className="p-1 m-1 font-bold" /> Result
             </h1>
           </div>
 
@@ -159,7 +156,7 @@ function ResultPage() {
 
     
     {/* Right side content */}
-    <div className="w-full sm:w-1/2 sm:m-0 m-16">
+    <div className="w-full sm:w-1/2 sm:m-0 m-14">
         <div className="sm:flex justify-center items-center h-full">
           <div style={{ width: '70%', position: 'relative' }}>
             {/* White circular component */}

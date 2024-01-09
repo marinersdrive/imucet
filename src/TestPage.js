@@ -5,6 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { FiClock } from "react-icons/fi"; // Import the clock icon
 import axios from "axios"; // Import axios for making HTTP requests
 import shuffleArray from "shuffle-array"; // Import the shuffle-array library
+import { BeatLoader } from "react-spinners";
+
 
 function TestPage() {
 
@@ -17,11 +19,20 @@ function TestPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
   const [currentSubCategory, setCurrentSubCategory] = useState("");
+  const [loading, setLoading] = useState(true);
+  
 
   let correct = 0;
   let incorrect = 0;
 
   const selectedCategory = localStorage.getItem("selectedCategory");
+
+  useEffect(() => {
+    window.history.pushState(null, null, window.location.href);
+    window.onpopstate = function () {
+      navigate(0);
+    };
+  });
 
   // Fetch questions from the server
   useEffect(() => {
@@ -66,9 +77,12 @@ function TestPage() {
         //const ans = correctAnswers.map(question => question.option)
         localStorage.setItem("correctAnswers", JSON.stringify(correctAnswers));
         localStorage.setItem("questions", JSON.stringify(filteredQuestions));
+
+        setLoading(false);
       })
       .catch(error => {
         console.error("Error fetching data:", error);
+        setLoading(false);
       });
   }, [selectedCategory]);
 
@@ -284,6 +298,14 @@ function TestPage() {
     }
   }, [questions, currentQuestionIndex, selectedCategory]);
   
+  if (loading) {
+    // Display loading spinner while questions are loading
+    return (
+      <div className="h-screen flex items-center justify-center bg-blue text-white">
+        <BeatLoader color="#ffffff" loading={loading} />
+      </div>
+    );
+  }
 
   return (
     <div onCopy={(e) => e.preventDefault()} className="h-screen flex flex-col justify-between font-montserrat overflow-y-none">
