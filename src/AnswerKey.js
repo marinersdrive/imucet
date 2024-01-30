@@ -21,7 +21,7 @@ function AnswerKeyPage() {
     <div onCopy={(e) => e.preventDefault()} className="min-h-screen sm:px-8 px-6 py-4 font-montserrat overflow-hidden flex flex-col">
       <div className="flex space-x-2.5 items-center mb-5">
           <img
-            src="https://drive.google.com/uc?id=11C2pCv-w91WXF0r-jfb2QYj5nkbyU3FC"
+            src="https://github.com/marinersdrive/images/blob/main/Main%20Logo.png?raw=true"
             alt="Logo"
             className="w-12 h-12 sm:w-14 sm:h-14 motion-safe:animate-spin"
           />
