@@ -41,7 +41,7 @@ function TestSeriesPage() {
     <div className="min-h-screen sm:px-8 px-6 pt-6 mb-4 sm:mb-0 font-montserrat overflow-hidden">
       <div className="flex space-x-2 items-center mb-6">
           <img
-            src="https://drive.google.com/uc?id=11C2pCv-w91WXF0r-jfb2QYj5nkbyU3FC"
+            src="./assets/Main Logo.png"
             alt="Logo"
             className="w-12 h-12 sm:w-14 sm:h-14 motion-safe:animate-spin"
           />

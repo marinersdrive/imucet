@@ -125,10 +125,10 @@ function InstructionsPage() {
   console.log(process.env.REACT_APP_SERVER_BASE_URL)
 
   return (
-    <div className="flex flex-col justify-center bg-white sm:px-8 px-6 pt-6  rounded-lg shadow-lg max-w-3xl mx-auto md:mt-20 lg:mt-6 lg:mb-6 font-montserrat">
+    <div className="flex flex-col justify-center bg-white sm:px-8 px-6 py-6  rounded-lg shadow-lg max-w-3xl mx-auto md:mt-20 lg:mt-6 lg:mb-6 font-montserrat">
       <div className="flex items-center justify-center mb-4">
         <img
-          src="https://drive.google.com/uc?id=11DPQtl1wO25qT3uJD9KVObPqsrx9XcZA"
+          src="./assets/Instructions Logo.png"
           alt="Logo"
           className="w-28 h-24 sm:w-40 sm:h-32"
         />
