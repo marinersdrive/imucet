@@ -313,7 +313,7 @@ function TestPage() {
       <div className="bg-blue text-white p-4 flex justify-between items-center hover:bg-opacity-90 transition duration-300 ease-in-out">
         <div className="flex items-center space-x-4">
           <img
-            src="./assets/Test Logo.png"
+            src="https://github.com/marinersdrive/images/blob/main/Test%20Logo.png?raw=true"
             alt="Logo"
             className="sm:w-14 sm:h-12 w-12 h-10"
           />

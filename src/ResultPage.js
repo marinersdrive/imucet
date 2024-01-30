@@ -73,7 +73,7 @@ function ResultPage() {
         <div className="sm:text-center">
           <div className="flex space-x-2.5 items-center mb-4">
             <img
-              src="./assets/Main Logo.png"
+              src="https://github.com/marinersdrive/images/blob/main/Main%20Logo.png?raw=true"
               alt="Logo"
               className="w-12 h-12 sm:w-14 sm:h-14 motion-safe:animate-spin"
             />

@@ -128,7 +128,7 @@ function InstructionsPage() {
     <div className="flex flex-col justify-center bg-white sm:px-8 px-6 py-6  rounded-lg shadow-lg max-w-3xl mx-auto md:mt-20 lg:mt-6 lg:mb-6 font-montserrat">
       <div className="flex items-center justify-center mb-4">
         <img
-          src="./assets/Instructions Logo.png"
+          src="https://github.com/marinersdrive/images/blob/main/Instructions%20Logo.png?raw=true"
           alt="Logo"
           className="w-28 h-24 sm:w-40 sm:h-32"
         />
